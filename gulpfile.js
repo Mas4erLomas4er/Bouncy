@@ -1,4 +1,4 @@
-var gulp = require( 'gulp' ),
+let gulp = require( 'gulp' ),
 	gutil = require( 'gulp-util' ),
 	sass = require( 'gulp-sass' ),
 	browserSync = require( 'browser-sync' ),
@@ -12,7 +12,8 @@ var gulp = require( 'gulp' ),
 	autoprefixer = require( 'gulp-autoprefixer' ),
 	ftp = require( 'vinyl-ftp' ),
 	notify = require( "gulp-notify" ),
-	rsync = require( 'gulp-rsync' );
+	rsync = require( 'gulp-rsync' ),
+	cssmin = require('gulp-cssmin');
 
 
 
@@ -62,7 +63,13 @@ gulp.task( 'sass', function () {
 	.pipe( rename( { suffix : '.min', prefix : '' } ) )
 	.pipe( autoprefixer( [ 'last 15 versions' ] ) )
 	.pipe( concat( 'main.min.css' ) )
-	.pipe( cleanCSS() )
+	// .pipe( cleanCSS() )
+	.pipe(cssmin({
+		showLog: true,
+		relativeTo: 'app/sass/components',
+		target: 'app/css/',
+		keepBreaks: true
+	}))
 	.pipe( gulp.dest( 'app/css' ) )
 	.pipe( browserSync.reload( { stream : true } ) );
 } );

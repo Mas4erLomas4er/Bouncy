@@ -26,6 +26,8 @@
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
+    "gulp-css-url-fix": "0.0.1",
+    "gulp-cssmin": "^0.2.0",
     "gulp-minify": "^3.1.0",
     "uglify-js": "^3.5.11"
   }
