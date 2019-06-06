@@ -1,0 +1,108 @@
+@import '../parameters/mixins';
+@import '../parameters/varibles';
+
+.site-header {
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    //background: url('../../img/header-bg.png');
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: $primary_color;
+    position: relative;
+    &__paralax-bg {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        display: block;
+        content: '';
+        background: url('../../img/header-bg.png');
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &__header-substitute {
+        height: 100px;
+        width: 90%;
+        display: none;
+        opacity: 0;
+        &_visible {
+            display: block;
+        }
+    }
+    &__header {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -ms-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        &_fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: $buttons_color;
+            height: 70px;
+            z-index: 100;
+            -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        }
+    }
+    &__logo {
+        font-family: "Big-John";
+        font-size: 25px;
+    }
+    &__navigation-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link {
+        color: $primary_color;
+        text-decoration: none;
+        padding: 7px 20px;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        &_active {
+            border: 1px solid $primary_color;
+        }
+    }
+    &__text {
+        font-family: "Source-Sans-Pro";
+        text-align: center;
+    }
+    &__title {
+        font-size: 35px;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+    &__subtitle {
+        letter-spacing: 0.8px;
+        line-height: 28px;
+        max-width: 600px;
+    }
+    &__button {
+        background-color: $buttons_color;
+        color: $primary_color;
+        width: 36px;
+        height: 36px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        margin-bottom: 50px;
+    }
+}

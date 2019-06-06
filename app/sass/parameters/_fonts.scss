@@ -1,0 +1,20 @@
+@import '../parameters/mixins';
+
+//Big John
+@include font-face("Big-John", "../../fonts/BigJohn/BIG-JOHN.otf");
+
+//Open Sans
+@include font-face("Open-Sans", "../../fonts/OpenSans/OpenSans-Regular.ttf");
+@include font-face("Open-Sans", "../../fonts/OpenSans/OpenSans-Italic.ttf", normal, italic);
+@include font-face("Open-Sans", "../../fonts/OpenSans/OpenSans-Bold.ttf", bold);
+@include font-face("Open-Sans", "../../fonts/OpenSans/OpenSans-BoldItalic.ttf", bold, italic);
+@include font-face("Open-Sans", "../../fonts/OpenSans/OpenSans-Light.ttf", lighter);
+@include font-face("Open-Sans", "../../fonts/OpenSans/OpenSans-Lighttalic.ttf", lighter, italic);
+
+//Source Sans Pro
+@include font-face("Source-Sans-Pro", "../../fonts/SourceSansPro/SourceSansPro-Regular.ttf");
+@include font-face("Source-Sans-Pro", "../../fonts/SourceSansPro/SourceSansPro-Italic.ttf", normal, italic);
+@include font-face("Source-Sans-Pro", "../../fonts/SourceSansPro/SourceSansPro-Bold.ttf", bold);
+@include font-face("Source-Sans-Pro", "../../fonts/SourceSansPro/SourceSansPro-BoldItalic.ttf", bold, italic);
+@include font-face("Source-Sans-Pro", "../../fonts/SourceSansPro/SourceSansPro-Light.ttf", lighter);
+@include font-face("Source-Sans-Pro", "../../fonts/SourceSansPro/SourceSansPro-Lighttalic.ttf", lighter, italic);

@@ -1,0 +1,23 @@
+@import '../parameters/varibles';
+@import '../parameters/mixins';
+
+.about {
+    display: flex;
+    justify-content: center;
+    padding: 35px 0;
+    background-color: $primary_color;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 850px;
+        width: 90%;
+    }
+    &__text {
+        max-width: 450px;
+    }
+    &__image {
+        height: 350px;
+        margin-top: 30px;
+    }
+}

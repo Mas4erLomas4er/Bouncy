@@ -1,0 +1,23 @@
+@import '../parameters/varibles';
+@import '../parameters/mixins';
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10px 100px;
+    background-color: $secondary_color;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        max-width: 1020px;
+        align-items: center;
+    }
+    &__progress {
+        display: flex;
+        justify-content: space-between;
+        max-width: 450px;
+        width: 95%;
+    }
+}

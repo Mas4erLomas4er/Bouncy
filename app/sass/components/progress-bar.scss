@@ -1,0 +1,75 @@
+@import '../parameters/varibles';
+@import '../parameters/mixins';
+// -- vars
+$default-size: 120px;
+$label-font-size-redo: $default-size / 2;
+// -- selectors
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.pie-wrapper {
+    @include size($default-size, $default-size);
+    position: relative;
+    .pie {
+        @include size(100%, 100%);
+        clip: rect(0, $default-size, $default-size, $default-size / 2);
+        left: 0;
+        position: absolute;
+        top: 0;
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+
+        .half-circle {
+            @include size(100%, 100%);
+            border: 3px solid #3498db;
+            border-radius: 50%;
+            clip: rect(0, $default-size / 2, $default-size, 0);
+            left: 0;
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    .label {
+        background: none;
+        width: 100%;
+        height: 100%;
+        color: $text_color;
+        cursor: default;
+        font-size: 25px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 1.25px;
+
+        .smaller {
+            color: #bdc3c7;
+            font-size: .56em;
+            padding-bottom: 5px;
+            vertical-align: bottom;
+        }
+    }
+
+    .shadow {
+        @include size(100%, 100%);
+        border: 3px solid #047378;
+        border-radius: 50%;
+    }
+
+    &.progress-80 {
+        @include draw-progress(80, $buttons_color);
+    }
+    &.progress-75 {
+        @include draw-progress(75, $buttons_color);
+    }
+    &.progress-60 {
+        @include draw-progress(60, $buttons_color);
+    }
+}

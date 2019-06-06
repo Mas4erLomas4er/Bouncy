@@ -1,0 +1,157 @@
+@import '../parameters/varibles';
+@import '../parameters/mixins';
+
+.portfolio-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    &__tabs-switcher {
+        display: flex;
+        color: $slider_tab_color;
+    }
+    &__tabs-btn {
+        padding: 10px;
+        position: relative;
+        margin-bottom: 30px;
+        cursor: pointer;
+        &:after {
+            content: ' ';
+            width: 50%;
+            left: 25%;
+            height: 2px;
+            background-color: $buttons_color;
+            position: absolute;
+            bottom: -5px;
+            -webkit-transition: $short_duration;
+            -moz-transition: $short_duration;
+            -ms-transition: $short_duration;
+            -o-transition: $short_duration;
+            transition: $short_duration;
+            opacity: 0;
+        }
+        &_active:after {
+            opacity: 1;
+        }
+    }
+    &__lane {
+        max-width: 1110px;
+        width: 95%;
+    }
+    &__slide {
+        height: 950px;
+        width: 100%;
+        display: none;
+        opacity: 0;
+        grid-auto-flow: column;
+        grid-template: repeat(20, 1fr) / repeat(4, 1fr);
+        grid-gap: 10px;
+        &_active {
+            display: grid;
+            opacity: 1;
+            -webkit-animation: slide-fade .7s;
+            -o-animation: slide-fade .7s;
+            animation: slide-fade .7s;
+        }
+    }
+
+    @keyframes slide-fade {
+        from {
+            display: grid;
+            opacity: 0.7;
+        }
+        50% {
+            -webkit-transform: scale(0.9);
+            -moz-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+            -o-transform: scale(0.9);
+            transform: scale(0.9);
+        }
+        70% {
+            -webkit-transform: scale(1.05);
+            -moz-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            -o-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    &__image {
+        background-position: center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        &:hover .portfolio-slider__block-description {
+            opacity: 1;
+        }
+    }
+    @for $i from 1 to 13 {
+        &__image:nth-child(#{$i}) {
+            background-image: url('../../img/portfolio-slider/slide_1/#{$i}.png');
+        }
+    }
+
+    &__block-description {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -ms-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+    }
+
+    &__text {
+        margin-bottom: 20px;
+        position: relative;
+        &:before {
+            content: '';
+            width: 25px;
+            height: 1px;
+            background-color: $buttons_color;
+            position: absolute;
+            left: 0;
+            top: -15px;
+        }
+    }
+    &__action-btn {
+        border: none;
+        width: 30px;
+        height: 30px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background-color: #000;
+        color: #fff;
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-transition: $short_duration;
+        -moz-transition: $short_duration;
+        -ms-transition: $short_duration;
+        -o-transition: $short_duration;
+        transition: $short_duration;
+        &:hover {
+            background-color: $slider_tab_color
+        }
+        &_like {
+            &_active {
+                color: #ff3d43;
+            }
+        }
+    }
+}

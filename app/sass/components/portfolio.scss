@@ -1,0 +1,24 @@
+@import '../parameters/varibles';
+@import '../parameters/mixins';
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: $secondary_color;
+    &__footer {
+        margin-top: 30px;
+        background: url('../../img/portfolio-footer-bg.png') $buttons_color;
+        max-width: 1110px;
+        width: 95%;
+        padding: 60px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            margin-bottom: 30px;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+@import 'parameters/reset';
+@import 'parameters/fonts';
+@import 'parameters/varibles';
+@import 'parameters/mixins';
+
+.wrapper {
+    font-family: "Open-Sans";
+}
+
+.primary-btn {
+    background-color: transparent;
+    padding: 7px 25px;
+    border: 1px solid $title_color;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: $title_color;
+    font-size: 16px;
+    -webkit-transition: $short_duration;
+    -moz-transition: $short_duration;
+    -ms-transition: $short_duration;
+    -o-transition: $short_duration;
+    transition: $short_duration;
+    &_white {
+        border: 1px solid $primary_color;
+        color: $primary_color;
+    }
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.section-title {
+    font-family: "Source-Sans-Pro";
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $title_color;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    &_white {
+        color: $secondary_color;
+    }
+    &_green {
+        color: $buttons_color;
+    }
+}
+
+.text {
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    line-height: 25px;
+    color: $text_color;
+    &_limited {
+        max-width: 460px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    &_light {
+        color: $light_text_color;
+    }
+    &_white {
+        color: #fff;
+    }
+    &_small {
+        font-size: 12px;
+    }
+    &_big {
+        font-size: 20px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+    }
+    &_right {
+        text-align: right;
+    }
+}
+
+.opacity {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+//::-webkit-scrollbar-track {
+//    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+//    background-color: #acacac;
+//}
+//
+//::-webkit-scrollbar {
+//    width: 12px;
+//    background-color: #acacac;
+//}
+//
+//::-webkit-scrollbar-thumb:start {
+//    border-radius: 0 10px;
+//}
+//
+//::-webkit-scrollbar-thumb {
+//    border-radius: 10px;
+//    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+//    background-color: #4d4d4d;
+//}

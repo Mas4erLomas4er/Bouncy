@@ -1,0 +1,19 @@
+@import '../parameters/varibles';
+@import '../parameters/mixins';
+
+.featured-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0 0;
+    background-color: $primary_color;
+    &__footer {
+        display: flex;
+        justify-content: space-around;
+        padding: 45px 10px;
+        width: 100%;
+        background: $buttons_color url("../../img/featured-projects-footer-bg.png") no-repeat center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+}

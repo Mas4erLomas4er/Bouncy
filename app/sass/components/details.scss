@@ -1,0 +1,10 @@
+@import '../parameters/varibles';
+@import '../parameters/mixins';
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondary_color;
+    padding: 50px 0;
+}
