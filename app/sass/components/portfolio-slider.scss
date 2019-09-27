@@ -18,6 +18,7 @@
         &:after {
             content: ' ';
             width: 50%;
+            transform: scaleX(0);
             left: 25%;
             height: 2px;
             background-color: $buttons_color;
@@ -32,6 +33,7 @@
         }
         &_active:after {
             opacity: 1;
+            transform: scaleX(1);
         }
     }
     &__lane {

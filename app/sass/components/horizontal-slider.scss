@@ -12,8 +12,8 @@
         max-width: 1030px;
         min-width: 700px;
         position: relative;
-        height: 366px;
         margin-bottom: 50px;
+        background-color: $primary_color;
     }
     &__slide {
         display: flex;
@@ -75,7 +75,7 @@
         position: absolute;
         left: 50%;
         width: 98%;
-        top: 50%;
+        top: calc(50% - 35px);
         transform: translate(-50%, -50%);
         display: flex;
         justify-content: space-between;

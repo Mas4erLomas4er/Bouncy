@@ -1,4 +1,62 @@
 $( document ).ready( function () {
+	setTimeout( function () {
+		$( 'body,html' ).animate( { scrollTop : 0 }, 100 );
+	}, 200 );
+	
+	let progress1 = $( '.progress-bar-1' ).ClassyLoader( {
+		width : 125,
+		height : 125,
+		speed : 10,
+		diameter : 60,
+		fontSize : '25px',
+		fontFamily : "Open-Sans",
+		fontColor : 'rgb(129,134,142)',
+		lineColor : 'rgb(25,189,154)',
+		percentage : 0,
+		lineWidth : 4,
+		start : 'top',
+		remainingLineColor : 'rgb(4,115,120)'
+	} );
+	let progress2 = $( '.progress-bar-2' ).ClassyLoader( {
+		width : 125,
+		height : 125,
+		speed : 10,
+		diameter : 60,
+		fontSize : '25px',
+		fontFamily : "Open-Sans",
+		fontColor : 'rgb(129,134,142)',
+		lineColor : 'rgb(25,189,154)',
+		percentage : 0,
+		lineWidth : 4,
+		start : 'top',
+		remainingLineColor : 'rgb(4,115,120)'
+	} );
+	let progress3 = $( '.progress-bar-3' ).ClassyLoader( {
+		width : 125,
+		height : 125,
+		speed : 10,
+		diameter : 60,
+		fontSize : '25px',
+		fontFamily : "Open-Sans",
+		fontColor : 'rgb(129,134,142)',
+		lineColor : 'rgb(25,189,154)',
+		percentage : 0,
+		lineWidth : 4,
+		start : 'top',
+		remainingLineColor : 'rgb(4,115,120)'
+	} );
+
+	const progressAnimating = () => {
+		if ( ( $( '.services__progress' ).css( 'visibility' ) !== 'hidden' ) && ( progress1.getPercent() === 0 ) ) {
+			progress1.setPercent( 80 );
+			progress1.draw();
+			progress2.setPercent( 65 );
+			progress2.draw();
+			progress3.setPercent( 70 );
+			progress3.draw();
+		}
+	};
+
 	const getRandomInt = ( min, max ) =>
 		Math.floor( Math.random() * ( max - min ) ) + min;
 
@@ -20,7 +78,8 @@ $( document ).ready( function () {
 	};
 
 	const fixedHeader = () => {
-		$( '.site-header__paralax-bg' ).css( { 'top' : -( $( window ).scrollTop() / 2 ) } );
+		$( '.site-header__paralax-bg' ).css( { 'top' : -( $( window ).scrollTop() / 4 ) } );
+
 
 		let header = $( '.site-header__header' );
 		let headerSubstitute = $( '.site-header__header-substitute' );
@@ -88,8 +147,8 @@ $( document ).ready( function () {
 		let result = [];
 		currentEls.each( function () {
 			let el = $( this );
-			let offset = el.offset();
-			if ( ( scrollTop <= offset.top && ( el.height() + offset.top ) <= ( scrollTop + windowHeight ) ) || ( ( el.height() + offset.top ) > ( scrollTop + windowHeight ) && scrollTop > offset.top ) ) {
+			let offset = scrollTop > 0 ? el.offset().top - 200 : el.offset().top;
+			if ( ( scrollTop <= offset && ( el.height() + offset ) <= ( scrollTop + windowHeight ) ) || ( ( el.height() + offset.top ) > ( scrollTop + windowHeight ) && scrollTop > offset ) ) {
 				result.push( this );
 			}
 		} );
@@ -115,22 +174,25 @@ $( document ).ready( function () {
 		} )
 	};
 
-	const teamSlider = () => {
-		let slides = $( '.horizontal-slider__content' ).children();
-		$( ".horizontal-slider__control-arrows" ).click( function ( event ) {
-			let currentSlide = $( '.horizontal-slider__slide_active' );
+	const teamSlider = ( slider ) => {
+		let content = $( slider ).children( '.horizontal-slider__content' );
+		content.css( 'height', content.attr( 'data-height' ) );
+		let slides = $( slider ).children( '.horizontal-slider__content' ).children();
+		$( slider ).children( ".horizontal-slider__control-arrows" ).click( function ( event ) {
+			let currentSlide = $( slider ).children( '.horizontal-slider__slide_active' );
 			let clickedArrow = $( event.target ).parents( 'button.horizontal-slider__arrow' );
 			if ( clickedArrow.hasClass( 'horizontal-slider__arrow_right' ) ) goToNextSlide( currentSlide );
 			else if ( clickedArrow.hasClass( 'horizontal-slider__arrow_left' ) ) goToPrevSlide( currentSlide );
 		} );
 
-		let switcherDots = $( '.horizontal-slider__switcher-dots' );
+		let switcherDots = $( slider ).children( '.horizontal-slider__switcher-dots' );
 
 		switcherDots.click( function ( event ) {
 			let clickedDot = $( event.target );
 
 			if ( !( clickedDot.hasClass( 'horizontal-slider__dot_active' ) ) && clickedDot.hasClass( 'horizontal-slider__dot' ) ) {
-				let currentSlide = $( '.horizontal-slider__slide_active' );
+				let currentSlide = $( slider ).children( '.horizontal-slider__slide_active' );
+				console.log( $( slider ).children( '.horizontal-slider__slide_active' ) );
 				let clickedDotIndex = switcherDots.children().index( clickedDot );
 
 				currentSlide.removeClass( 'horizontal-slider__slide_active' );
@@ -153,18 +215,32 @@ $( document ).ready( function () {
 			selectDot( switcherDots.children().eq( slides.index( prevSlide ) ) );
 		};
 		const selectDot = ( dot ) => {
-			let currentDot = $( '.horizontal-slider__dot_active' );
+			let currentDot = $( slider ).children( '.horizontal-slider__dot_active' );
 			dot.addClass( 'horizontal-slider__dot_active' );
 			currentDot.removeClass( 'horizontal-slider__dot_active' );
 		}
+	};
+	const downScrollArrow = () => {
+		const windowHeight = document.documentElement.clientHeight;
+		$( 'body,html' ).animate( { scrollTop : windowHeight - 70 }, 1000 );
+	};
+
+	const scrolling = () => {
+		fixedHeader();
+		progressAnimating();
+		changeNavLinks()
 	};
 
 
 	$( '.site-header__navigation-list' ).click( scrollToSection );
 	featuresSlider();
-	$( document ).scroll( fixedHeader );
-	$( window ).scroll( changeNavLinks );
+	$( window ).scroll( scrolling );
 	portfolioSlider();
 	likePortfolioProject();
-	teamSlider();
+	$( '.horizontal-slider' ).each( function () {
+		console.log( $( this ) );
+		teamSlider( $( this ) );
+	} );
+	setTimeout( progressAnimating, 200 );
+	$( '.site-header__button' ).on( 'click', downScrollArrow )
 } );

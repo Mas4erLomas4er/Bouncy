@@ -3,8 +3,18 @@
 @import 'parameters/varibles';
 @import 'parameters/mixins';
 
+
 body {
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+.wrapper {
     font-family: "Open-Sans";
+}
+
+.wow {
+    visibility: hidden;
 }
 
 .primary-btn {
@@ -63,6 +73,9 @@ body {
     }
     &_small {
         font-size: 12px;
+    }
+    &_medium {
+        font-size: 16px;
     }
     &_big {
         font-size: 20px;

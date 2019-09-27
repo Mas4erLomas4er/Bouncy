@@ -3,8 +3,9 @@
 
 .testimonials {
     display: flex;
-    background: $secondary_color;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0 0;
+    padding: 50px 0;
+    background-color: $secondary_color;
+
 }
