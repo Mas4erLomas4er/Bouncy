@@ -4,3 +4,5 @@
 /**/*.psd
 /**/Thumbs.db
 /**/*.DS_Store
+/.idea/
+/.gitignore

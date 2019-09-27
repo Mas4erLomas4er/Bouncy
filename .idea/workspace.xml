@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e289c671-b649-4303-abda-eafadd527695" name="Default" comment="fix URLs">
-      <change afterPath="$PROJECT_DIR$/app/libs/wowjs/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Mas4erLomas4er.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.bowerrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/main.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/common.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/common.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/scripts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/smooth-scroll.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sass/components/about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/components/about.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sass/components/horizontal-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/components/horizontal-slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sass/components/portfolio-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/components/portfolio-slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sass/components/testimonials.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/components/testimonials.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,11 +52,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="224" column="65" selection-start-line="224" selection-start-column="65" selection-end-line="224" selection-end-column="65" />
+            <state relative-caret-position="120">
+              <caret line="233" lean-forward="true" selection-start-line="233" selection-end-line="233" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -148,12 +144,19 @@
         <option value="$PROJECT_DIR$/app/sass/components/services.scss" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/js/common.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
     <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
@@ -193,56 +196,6 @@
               <item name="Bouncy" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bouncy" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Bouncy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bouncy" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bouncy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bouncy" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bouncy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bouncy" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bouncy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bouncy" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bouncy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bouncy" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-              <item name="circularPercentageLoader" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bouncy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bouncy" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bouncy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bouncy" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bouncy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bouncy" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
-              <item name="parameters" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -281,7 +234,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -385,7 +338,7 @@
       <workItem from="1569083422703" duration="331000" />
       <workItem from="1569252961072" duration="6312000" />
       <workItem from="1569425122757" duration="3975000" />
-      <workItem from="1569510991090" duration="23426000" />
+      <workItem from="1569510991090" duration="24079000" />
     </task>
     <task id="LOCAL-00001" summary="font">
       <created>1559802810606</created>
@@ -405,7 +358,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43355000" />
+    <option name="totallyTimeSpent" value="44008000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="all">
@@ -418,15 +371,15 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16764276" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16764276" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32857144" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.0" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32063493" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32063493" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -469,16 +422,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="fix URLs" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34776">
-          <caret line="1288" column="16" selection-start-line="1288" selection-start-column="16" selection-end-line="1288" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/anrvasya/1/lleson.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -785,10 +728,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="224" column="65" selection-start-line="224" selection-start-column="65" selection-end-line="224" selection-end-column="65" />
+        <state relative-caret-position="120">
+          <caret line="233" lean-forward="true" selection-start-line="233" selection-end-line="233" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
