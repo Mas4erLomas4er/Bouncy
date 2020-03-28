@@ -1,8 +1,42 @@
 $( document ).ready( function () {
-	setTimeout( function () {
-		$( 'body,html' ).animate( { scrollTop : 0 }, 100 );
-	}, 200 );
-	
+
+	const disablePreloader = () => {
+		let preloader = $( '.preloader' );
+		setTimeout( function () {
+			if ( !preloader.hasClass( 'done' ) ) {
+				preloader.addClass( 'done' );
+			}
+		}, 1000 );
+	};
+
+
+	const typeBlogText = () => {
+		// let elemHeight = document.getElementsByClassName('post')[0].clientHeight;
+		// console.log(elemHeight);
+		let typeElem = new Typed( '.typed', {
+			strings : [ "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio... " ],
+			typeSpeed : 0,
+			showCursor : false
+		} );
+	};
+
+	$( function () {
+		$( "body" ).niceScroll( {
+			zindex : 10000
+		} );
+	} );
+	let wow = new WOW( {
+		offset : 100,
+		mobile : false,
+		callback : function ( box ) {
+			// console.log();
+			if ( $( box ).hasClass( 'typed' ) ) {
+				typeBlogText()
+			}
+		}
+	} );
+	wow.init();
+
 	let progress1 = $( '.progress-bar-1' ).ClassyLoader( {
 		width : 125,
 		height : 125,
@@ -132,7 +166,7 @@ $( document ).ready( function () {
 	} );
 
 	const changeNavLinks = () => {
-		let viewedElem = $( inWindow( '.nav-site-header, .nav-about, .nav-services, .nav-portfolio, .nav-team' )[ 0 ] );
+		let viewedElem = $( inWindow( '.nav-site-header, .nav-about, .nav-portfolio, .nav-services, .nav-team, .nav-blog' )[ 0 ] );
 		let currentElem = $( '.site-header__link_active' );
 		if ( currentElem.attr( 'href' ) !== '#' + viewedElem.attr( 'data-nav' ) && viewedElem.attr( 'data-nav' ) !== undefined ) {
 			currentElem.removeClass( 'site-header__link_active' );
@@ -148,7 +182,7 @@ $( document ).ready( function () {
 		currentEls.each( function () {
 			let el = $( this );
 			let offset = scrollTop > 0 ? el.offset().top - 200 : el.offset().top;
-			if ( ( scrollTop <= offset && ( el.height() + offset ) <= ( scrollTop + windowHeight ) ) || ( ( el.height() + offset.top ) > ( scrollTop + windowHeight ) && scrollTop > offset ) ) {
+			if ( ( scrollTop <= offset && ( el.height() + offset ) <= ( scrollTop + windowHeight ) ) || ( ( el.height() + offset ) > ( scrollTop + windowHeight ) && scrollTop > offset ) ) {
 				result.push( this );
 			}
 		} );
@@ -179,7 +213,7 @@ $( document ).ready( function () {
 		content.css( 'height', content.attr( 'data-height' ) );
 		let slides = $( slider ).children( '.horizontal-slider__content' ).children();
 		$( slider ).children( ".horizontal-slider__control-arrows" ).click( function ( event ) {
-			let currentSlide = $( slider ).children( '.horizontal-slider__slide_active' );
+			let currentSlide = content.children( '.horizontal-slider__slide_active' );
 			let clickedArrow = $( event.target ).parents( 'button.horizontal-slider__arrow' );
 			if ( clickedArrow.hasClass( 'horizontal-slider__arrow_right' ) ) goToNextSlide( currentSlide );
 			else if ( clickedArrow.hasClass( 'horizontal-slider__arrow_left' ) ) goToPrevSlide( currentSlide );
@@ -191,8 +225,8 @@ $( document ).ready( function () {
 			let clickedDot = $( event.target );
 
 			if ( !( clickedDot.hasClass( 'horizontal-slider__dot_active' ) ) && clickedDot.hasClass( 'horizontal-slider__dot' ) ) {
-				let currentSlide = $( slider ).children( '.horizontal-slider__slide_active' );
-				console.log( $( slider ).children( '.horizontal-slider__slide_active' ) );
+				let currentSlide = content.children( '.horizontal-slider__slide_active' );
+				console.log( content.children( '.horizontal-slider__slide_active' ) );
 				let clickedDotIndex = switcherDots.children().index( clickedDot );
 
 				currentSlide.removeClass( 'horizontal-slider__slide_active' );
@@ -215,7 +249,8 @@ $( document ).ready( function () {
 			selectDot( switcherDots.children().eq( slides.index( prevSlide ) ) );
 		};
 		const selectDot = ( dot ) => {
-			let currentDot = $( slider ).children( '.horizontal-slider__dot_active' );
+			let allDots = $( slider ).children( '.horizontal-slider__switcher-dots' )
+			let currentDot = allDots.children( '.horizontal-slider__dot_active' );
 			dot.addClass( 'horizontal-slider__dot_active' );
 			currentDot.removeClass( 'horizontal-slider__dot_active' );
 		}
@@ -228,7 +263,7 @@ $( document ).ready( function () {
 	const scrolling = () => {
 		fixedHeader();
 		progressAnimating();
-		changeNavLinks()
+		changeNavLinks();
 	};
 
 
@@ -242,5 +277,6 @@ $( document ).ready( function () {
 		teamSlider( $( this ) );
 	} );
 	setTimeout( progressAnimating, 200 );
-	$( '.site-header__button' ).on( 'click', downScrollArrow )
+	$( '.site-header__button' ).on( 'click', downScrollArrow );
+	disablePreloader();
 } );

@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
 
-    <title>Title</title>
+    <title>Bouncy</title>
     <meta name="description" content="WE ARE CODE CAFE">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,18 +24,22 @@
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
-    <link rel="stylesheet" href="libs/fontawesome-pro-5.8.1-web/css/all.min.css">
+    <link rel="stylesheet" href="libs/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="libs/wowjs/animate.css">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body data-scroll>
+    
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
 
     <div class="wrapper">
         <!--HEADER-->
-        <div data-nav="site-header" id="site-header" class="site-header  nav-site-header">
+        <header data-nav="site-header" id="site-header" class="site-header  nav-site-header">
             <div class="site-header__paralax-bg"></div>
-            <header class="site-header__header wow fadeInDown">
+            <header class="site-header__header wow fadeInDown" data-wow-delay="0.7s">
                 <h1 class="site-header__logo">Bouncy</h1>
                 <ul class="site-header__navigation-list">
                     <li class="site-header__item">
@@ -63,15 +67,15 @@
             </header>
             <div class="site-header__header-substitute"></div>
             <div class="site-header__text">
-                <h2 class="site-header__title wow zoomIn">We Are Code Cafe</h2>
-                <h5 class="site-header__subtitle wow fadeInDown" data-wow-delay="0.5s">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</h5>
+                <h2 class="site-header__title wow zoomIn" data-wow-delay="0.7s">We Are Code Cafe</h2>
+                <h5 class="site-header__subtitle wow fadeInDown" data-wow-delay="1.2s">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</h5>
             </div>
             <button class="site-header__button">
                 <i class="fal fa-chevron-down"></i>
             </button>
-        </div>
+        </header>
         <!--ABOUT SECTION-->
-        <div data-nav="about" id="about" class="about nav-about">
+        <section data-nav="about" id="about" class="about nav-about">
             <div class="about__container">
                 <div class="about__text wow fadeInLeft">
                     <h2 class="section-title">This is Bouncy</h2>
@@ -81,10 +85,10 @@
                 </div>
                 <img src="img/iPad.png" alt="5" class="about__image wow fadeInRight">
             </div>
-        </div>
-        <div data-nav="about" class="details nav-about">
+        </section>
+        <section data-nav="about" class="details nav-about">
             <h2 class="section-title wow fadeInDown">DetailS ABOUT BOUNCY</h2>
-            <p class="text text_limited wow fadeInUp">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+            <p class="text text_limited text_center wow fadeInUp">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
             <div class="slider">
                 <div class="slider__btns">
                     <button class="slider__switcher-btn slider__switcher-btn_active wow fadeInLeft">
@@ -108,10 +112,10 @@
                     <div class="slider__slide slider__slide_3"></div>
                 </div>
             </div>
-        </div>
-        <div data-nav="about" class="featured-projects nav-about">
+        </section>
+        <section data-nav="about" class="featured-projects nav-about">
             <h2 class="section-title wow fadeInDown">Featured projects</h2>
-            <p class="text text_limited wow fadeInUp">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+            <p class="text text_limited text_center wow fadeInUp">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
             <div class="projects-slider fadeIn" data-wow-duration="2s">
                 <div class="projects-slider__slide">
                     <img src="img/project-slider/books2.png" alt="" class="projects-slider__image">
@@ -128,16 +132,16 @@
                     <div class="opacity"></div>
                     <h3 class="projects-slider__title">Printing</h3>
                 </div>
-            </div >
+            </div>
             <div class="featured-projects__footer">
                 <p class="text text_white text_big wow fadeInLeft">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
                 <button class="primary-btn_white primary-btn wow fadeInRight">Submit Now</button>
             </div>
-        </div>
+        </section>
         <!--SERVICES-->
-        <div data-nav="services" id="services" class="services nav-services">
+        <section data-nav="services" id="services" class="services nav-services">
             <h2 class="section-title wow fadeInDown">Our services</h2>
-            <p class="text text_limited wow fadeInUp">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+            <p class="text text_limited text_center wow fadeInUp">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
             <div class="services__row">
                 <div class="slider slider_column">
                     <div class="slider__btns slider_column__btns wow fadeInLeft">
@@ -154,7 +158,7 @@
                             <i class="fal fa-plug"></i>
                         </button>
                     </div>
-                    <div class="slider__lane slider_column__lane wow fadeIn"  data-wow-duration="2s">
+                    <div class="slider__lane slider_column__lane wow fadeIn" data-wow-duration="2s">
                         <div class="slider__slide slider__slide_1 slider_column__slide">
                             <h3 class="slider__title slider_column__title">Creative Ideas</h3>
                             <p class="text slider__left-part slider_column__left-part">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</p>
@@ -171,21 +175,21 @@
                 </div>
             </div>
 
-        </div>
-        <div data-nav="services" class="quote nav-services">
-            <div class="quote__text-container">
+        </section>
+        <section data-nav="services" class="quote nav-services">
+            <div class="quote__text-container wow bounceInLeft">
                 <h2 class="section-title section-title_white">Impressed ?</h2>
                 <p class="text text_light quote__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias</p>
                 <p class="quote__author">- Abdullah Noman</p>
                 <p class="quote__author-job">Creatice Director, Code Cafe</p>
             </div>
-            <img src="img/iMac.png" alt="" class="quote__image">
-        </div>
+            <img src="img/iMac.png" alt="" class="quote__image wow jackInTheBox">
+        </section>
         <!--PORTFOLIO-->
-        <div data-nav="portfolio" class="portfolio nav-portfolio" id="portfolio">
-            <h2 class="section-title">The portfolio</h2>
-            <p class="text text_limited">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
-            <div class="portfolio-slider">
+        <section data-nav="portfolio" class="portfolio nav-portfolio" id="portfolio">
+            <h2 class="section-title wow fadeInDown">The portfolio</h2>
+            <p class="text text_limited text_center wow fadeInUp">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+            <div class="portfolio-slider wow pulse">
                 <div class="portfolio-slider__tabs-switcher">
                     <div data-tab-index="0" class="portfolio-slider__tabs-btn portfolio-slider__tabs-btn_active">All Works</div>
                     <div data-tab-index="1" class="portfolio-slider__tabs-btn">Print</div>
@@ -1137,15 +1141,15 @@
                 </div>
             </div>
             <div class="portfolio__footer">
-                <p class="text text_white text_big">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                <button class="primary-btn_white primary-btn">Start project</button>
+                <p class="text text_white text_big wow zoomInLeft">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                <button class="primary-btn_white primary-btn wow zoomInRight">Start project</button>
             </div>
-        </div>
+        </section>
         <!--TEAM SECTION-->
-        <div data-nav="team" class="team nav-team" id="team">
-            <h2 class="section-title">The team</h2>
-            <p class="text text_limited">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
-            <div class="horizontal-slider">
+        <section data-nav="team" class="team nav-team" id="team">
+            <h2 class="section-title wow fadeInDown">The team</h2>
+            <p class="text text_limited text_center wow fadeInUp">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+            <div class="horizontal-slider wow pulse">
                 <div class="horizontal-slider__content" data-height="366px">
                     <div class="horizontal-slider__slide horizontal-slider__slide_active">
                         <div class="team__avatar">
@@ -1160,7 +1164,7 @@
                         </div>
                         <div class="team__data">
                             <div class="team__person">
-                                <h4 class="team__name">Abdullah Noman</h4>
+                                <h4 class="team__name">Abdullah Noman1</h4>
                                 <h6 class="team__position">Creative Director, Code Cafe</h6>
                             </div>
                             <p class="text text_right">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
@@ -1184,7 +1188,7 @@
                         </div>
                         <div class="team__data">
                             <div class="team__person">
-                                <h4 class="team__name">Abdullah Noman</h4>
+                                <h4 class="team__name">Abdullah Noman2</h4>
                                 <h6 class="team__position">Creative Director, Code Cafe</h6>
                             </div>
                             <p class="text text_right">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
@@ -1231,24 +1235,66 @@
                 </div>
             </div>
             <div class="team__footer">
-                <p class="text text_big text_white">Already Loved Us? Let’s talk!</p>
-                <button class="primary-btn_white primary-btn">Contact Us</button>
+                <p class="text text_big text_white wow rollIn">Already Loved Us? Let’s talk!</p>
+                <button class="primary-btn_white primary-btn wow jackInTheBox">Contact Us</button>
             </div>
-        </div>
+        </section>
         <!--TESTIMONIALS-->
-        <div data-nav="team" class="testimonials nav-team">
-            <h2 class="section-title">Testimonials</h2>
-            <p class="text text_limited">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
-            <div class="horizontal-slider">
-                <div class="horizontal-slider__content" data-height="150px">
+        <section data-nav="team" class="testimonials nav-team">
+            <h2 class="section-title wow fadeInDown">Testimonials</h2>
+            <p class="text text_limited text_center wow fadeInUp">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+            <div class="horizontal-slider wow pulse">
+                <div class="horizontal-slider__content" data-height="280px">
                     <div class="horizontal-slider__slide horizontal-slider__slide_active">
-                        <div class="testimonials__avatar">
-                            <img src="img/comments/comment-avatar.png" alt="">
+                        <div class="testimonials__content">
+                            <div class="testimonials__avatar">
+                                <img src="img/comments/comment-avatar.png" alt="">
+                            </div>
+                            <div class="testimonials__comment">
+                                <p class="text text_medium">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
+                                                            deserunt mollitia.</p>
+                                <p class="testimonials__nick">Partho</p>
+                                <p class="testimonials__job">Founder, artways BD</p>
+                            </div>
                         </div>
-                        <div class="comment">
-                            <p class="text text_medium">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.</p>
-                            <p class="testimonials__nick">Partho</p>
-                            <p class="testimonials__job">Founder, artways BD</p>
+                    </div>
+                    <div class="horizontal-slider__slide">
+                        <div class="testimonials__content testimonials__content_right">
+                            <div class="testimonials__avatar">
+                                <img src="img/comments/comment-avatar.png" alt="">
+                            </div>
+                            <div class="testimonials__comment">
+                                <p class="text text_medium">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
+                                                            deserunt mollitia.</p>
+                                <p class="testimonials__nick">Partho</p>
+                                <p class="testimonials__job">Founder, artways BD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontal-slider__slide">
+                        <div class="testimonials__content">
+                            <div class="testimonials__avatar">
+                                <img src="img/comments/comment-avatar.png" alt="">
+                            </div>
+                            <div class="testimonials__comment">
+                                <p class="text text_medium">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
+                                                            deserunt mollitia.</p>
+                                <p class="testimonials__nick">Partho</p>
+                                <p class="testimonials__job">Founder, artways BD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontal-slider__slide">
+                        <div class="testimonials__content testimonials__content_right">
+                            <div class="testimonials__avatar">
+                                <img src="img/comments/comment-avatar.png" alt="">
+                            </div>
+                            <div class="testimonials__comment">
+                                <p class="text text_medium">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
+                                                            deserunt mollitia.</p>
+                                <p class="testimonials__nick">Partho</p>
+                                <p class="testimonials__job">Founder, artways BD</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1260,20 +1306,34 @@
                     <button class="horizontal-slider__dot horizontal-slider__dot_active"></button>
                     <button class="horizontal-slider__dot"></button>
                     <button class="horizontal-slider__dot"></button>
+                    <button class="horizontal-slider__dot"></button>
                 </div>
             </div>
-        </div>
+        </section>
+        <!--BLOG-->
+        <section data-nav="blog" class="blog nav-blog" id="blog">
+            <div class="blog__content">
+                <h2 class="section-title section-title_white wow fadeInDown">Latest news</h2>
+                <p class="text text_limited text_white wow fadeInUp">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                <div class="blog__posts-container">
+                    <article class="post">
+                        <h4 class="post__name wow flipInX">The trending Landing Pages</h4>
+                        <p class="post__author wow fadeIn"><span>by </span>Kabir Uddin</p>
+                        <p class="post__statistics wow fadeIn">
+                            <span class="post__likes">6950 Likes</span>
+                            -
+                            <span class="post__comments">243 Comments</span>
+                            -
+                            <span class="post__shares">703 shares</span></p>
+                        <p class="text typed wow fadeIn"></p>
+                        <button class="post__continue-btn wow fadeInLeft">+ Read More</button>
+                    </article>
+                </div>
+            </div>
+        </section>
     </div>
 
 
-    <script src="js/scripts.min.js" ></script>
-    <script>
-		$( function () {
-			$( "body" ).niceScroll( {
-				zindex : 10000
-			} );
-		} );
-		new WOW().init();
-    </script>
+    <script src="js/scripts.min.js"></script>
 </body>
 </html>

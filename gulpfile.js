@@ -181,9 +181,10 @@ gulp.task( 'common-js', function () {
 gulp.task( 'js', [ 'common-js' ], function () {
 	return gulp.src( [
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/jquery.nicescroll-3.7.6/dist/jquery.nicescroll.min.js',
+		'app/libs/jquery.nicescroll/dist/jquery.nicescroll.min.js',
 		'app/libs/wowjs/wow.min.js',
 		'app/libs/circularPercentageLoader/jquery.classyloader.min.js',
+		'app/libs/typedjs/typed.min.js',
 		'app/js/common.min.js'
 	] )
 	.pipe( concat( 'scripts.js' ) )
